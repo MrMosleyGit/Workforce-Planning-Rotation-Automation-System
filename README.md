@@ -1,5 +1,7 @@
 # Workforce Planning & Rotation Automation System
 
+![Workforce Planning & Rotation Automation System](assets/Workforce-Planning-Rotation-GitHub-Hero.png)
+
 > **Portfolio Disclaimer:** This project is a sanitized portfolio case study based on an Excel VBA labor planning automation I designed for operations planning. All internal system names, data sources, personnel references, and workflow specifics have been replaced with generalized equivalents. No proprietary company data, internal systems, or confidential process details are included.
 
 ---
@@ -55,6 +57,8 @@ Used an AI assistant and Excel VBA to build a macro-driven planning tool that au
 
 ## How It Works
 
+![Sanitized workflow diagram](assets/Workforce-Planning-Rotation-Sanitized-Workflow-Diagram.png)
+
 ### Five Data Sources
 
 | Source | Key Data |
@@ -69,11 +73,13 @@ Used an AI assistant and Excel VBA to build a macro-driven planning tool that au
 
 The main macro chains 5 dictionary lookups:
 
+```
 Associate ID -> Active Status -> Availability Status
              -> Training Eligibility -> Prior-Day Assignment Check
              -> Work Area Assignment -> Secondary Task Pairing
              -> Workload Volume Attached
              -> Final Assignment or Exception Flag
+```
 
 ### Dictionary Architecture
 
@@ -87,6 +93,12 @@ Associate ID -> Active Status -> Availability Status
 | areaToBagCount | Work Area to Workload Volume |
 | areaToCoverageNeed | Work Area to Required Coverage |
 | areaToSecondaryTask | Work Area to Secondary Task |
+
+---
+
+## Sample Output
+
+![Sanitized sample output](assets/Workforce-Planning-Rotation-Sanitized-Sample-Output.png)
 
 ---
 
@@ -118,7 +130,7 @@ Built using conversational AI with zero prior VBA experience:
 ## Module Structure
 
 | Module | Purpose |
-|--------|---------|
+|--------|---------| 
 | SetupLaborPlanner | Creates sheets, headers, formatting, and control buttons |
 | RefreshLaborInputs | Runs all five import macros |
 | BuildWeeklyRotation | Main assignment engine |
@@ -135,7 +147,7 @@ Built using conversational AI with zero prior VBA experience:
 
 - AI Assistant for architecture and code generation
 - Excel VBA for macro execution
-- Scripting.Dictionary for in-memory hash maps
+- `Scripting.Dictionary` for in-memory hash maps
 - Five internal data source integrations
 
 ---
